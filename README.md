@@ -1,7 +1,6 @@
-# GPT-2 Experiments
+# LLM Experiments
 
-This repository contains several independent experiments and implementations related to **GPT-2**.  
-The files are self-contained and can be used separately.
+Projects and experiments on Large Language Models (LLMs), including GPT-2 fine-tuning, text classification, and instruction-tuned personal assistants.
 
 ---
 
