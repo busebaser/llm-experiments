@@ -1,9 +1,3 @@
-# LLM Experiments
-
-Projects and experiments on Large Language Models (LLMs), including GPT-2 fine-tuning, text classification, and instruction-tuned personal assistants.
-
----
-
 ## Files Overview
 
 - **`gpt_download.py`**  
