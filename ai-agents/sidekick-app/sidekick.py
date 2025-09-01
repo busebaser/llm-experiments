@@ -33,7 +33,7 @@ class EvaluatorOutput(BaseModel):
         description="True if more input is needed from the user, or clarifications, or the assistant is stuck"
     )
 
-# Sidekick (Gemini + minimal tools)
+# Sidekick
 class Sidekick:
     """
     Minimal Sidekick:
@@ -54,8 +54,8 @@ class Sidekick:
         # Tools
         self.tools = minimal_tools()
 
-        # Worker (tool-using) Gemini model
-        worker_llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash-preview-05-20")  # or "gemini-1.5-flash"
+        # Worker Gemini model
+        worker_llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash-preview-05-20")  
         self.worker_llm_with_tools = worker_llm.bind_tools(self.tools)
 
         # Evaluator Gemini model with structured output
@@ -64,9 +64,8 @@ class Sidekick:
 
         await self.build_graph()
 
-    # -----------------------------
+
     # Worker node
-    # -----------------------------
     def worker(self, state: State) -> Dict[str, Any]:
         system_message = f"""You are a helpful assistant with access to exactly three tools:
 1) search — DuckDuckGo search that returns result snippets only (no browsing).
@@ -194,3 +193,4 @@ Last Assistant response:
                 return
         except RuntimeError:
             return
+
