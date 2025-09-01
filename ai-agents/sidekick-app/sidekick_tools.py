@@ -87,7 +87,7 @@ def safe_calculate(expr: str) -> str:
     except Exception as e:
         return f"Error: {e}"
 
-# Tool registry (minimal scope)
+# Tool registry
 def minimal_tools():
     return [
         Tool(
@@ -106,3 +106,4 @@ def minimal_tools():
             description="Safely evaluate arithmetic (+ - * / // % ** and parentheses)."
         ),
     ]
+
