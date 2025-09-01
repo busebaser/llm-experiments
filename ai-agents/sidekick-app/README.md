@@ -24,10 +24,10 @@ It provides a minimal but powerful assistant that can:
 
 ## 📂 Project Structure
 
-├── app.py # Gradio interface (entrypoint)
-├── sidekick.py # Core Sidekick graph & agent logic
-├── sidekick_tools.py # Minimal tool implementations
-└── README.md
+- ├── app.py # Gradio interface (entrypoint)
+- ├── sidekick.py # Core Sidekick graph & agent logic
+- ├── sidekick_tools.py # Minimal tool implementations
+- └── README.md
 
 ## Environment variables
 
