@@ -4,19 +4,18 @@ This repository is a collection of experiments and projects with LLMs and AI age
 The goal is to explore how different models and runtimes can be combined to build intelligent, interactive, and multi-agent applications.
 
 📂 Projects
+
 1. 🪨📄✂ Rock-Paper-Scissors Agents
 
 A multi-agent system built with Autogen
  and Ollama
-, where agents play a game of Rock-Paper-Scissors.
+, where agents play a game of Rock-Paper-Scissors. It demonstrates agent-to-agent communication and decision-making with local LLMs.
 
 Player Agents: Two agents that select moves (rock, paper, or scissors).
 
 Game Master Agent: Coordinates the game and judges the winner using LLM reasoning.
 
 Runtime: Message passing with SingleThreadedAgentRuntime.
-
-👉 Demonstrates agent-to-agent communication and decision-making with local LLMs.
 
 
 2. 🤖 Sidekick
