@@ -30,13 +30,15 @@ It provides a minimal but powerful assistant that can:
 └── README.md
 
 ## Environment variables
-Create a .env file in the project root:
-GOOGLE_API_KEY=your_gemini_api_key
-PUSHOVER_TOKEN=your_pushover_app_token
-PUSHOVER_USER=your_pushover_user_or_group_key
+
+- Create a .env file in the project root:
+- GOOGLE_API_KEY=your_gemini_api_key
+- PUSHOVER_TOKEN=your_pushover_app_token
+- PUSHOVER_USER=your_pushover_user_or_group_key
 
 ## Run
 python app.py
+
 Then open http://127.0.0.1:7860 in your browser.
 
 
