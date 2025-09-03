@@ -5,7 +5,6 @@ def ensure_dataset(local_csv="data/gym_data.csv"):
     p = Path(local_csv)
     if p.exists():
         return local_csv
-    # Try Kaggle API if creds exist, else ask user to drop file manually
     if not (os.getenv("KAGGLE_USERNAME") and os.getenv("KAGGLE_KEY")):
         raise RuntimeError(
             "Place gym_data.csv at data/gym_data.csv or set KAGGLE_USERNAME/KAGGLE_KEY."
@@ -13,14 +12,12 @@ def ensure_dataset(local_csv="data/gym_data.csv"):
     import kaggle
     outdir = Path("data"); outdir.mkdir(parents=True, exist_ok=True)
     kaggle.api.authenticate()
-    # This dataset contains a CSV already; download + extract
     kaggle.api.dataset_download_files(
         "valakhorasani/gym-members-exercise-dataset", path=str(outdir), unzip=True
     )
-    # Try to guess file name
+
     candidates = list(outdir.glob("*.csv"))
     if not candidates:
-        # If it downloaded a zip, unzip it
         zips = list(outdir.glob("*.zip"))
         if zips:
             with zipfile.ZipFile(zips[0]) as zf:
@@ -30,6 +27,6 @@ def ensure_dataset(local_csv="data/gym_data.csv"):
             candidates = list(outdir.glob("*.csv"))
     if not candidates:
         raise FileNotFoundError("Could not find CSV after download.")
-    # Normalize name
     shutil.copy(str(candidates[0]), local_csv)
     return local_csv
+
