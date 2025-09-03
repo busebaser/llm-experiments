@@ -32,3 +32,8 @@ It provides a minimal but powerful assistant that can:
 3. AI EDA Agent
 
 This project demonstrates an AI-powered data analyst agent that automatically performs Exploratory Data Analysis (EDA) on a dataset. It uses AutoGen to manage AI agents, with Google Gemini (OpenAI-compatible API) as the LLM backend.
+
+4. 🎵 Music Finder & Translator
+
+This project is an AI-powered tool that identifies songs from lyric snippets and translates the lyrics into a target language, using CrewAI agents and DuckDuckGo Search (via ddgs) to fetch song and translation information.
+
