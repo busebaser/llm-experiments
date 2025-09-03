@@ -10,7 +10,7 @@ base_url = os.getenv(
     )
 assert api_key, "Set GOOGLE_API_KEY in .env"
 
-DATA_CSV   = "C:/Users/Buse/Desktop/autogen-kaggle-commentators/gym_members_exercise_tracking.csv"
+DATA_CSV   = "your_path"
 REPORT_DIR = Path("reports")
 FIG_DIR    = REPORT_DIR / "figures"
 REPORT_DIR.mkdir(parents=True, exist_ok=True)
@@ -69,7 +69,7 @@ Rules:
 """
 
 
-# ---------- minimal local runner for code blocks ----------
+#  minimal local runner for code blocks 
 def extract_python_blocks(text: str) -> list[str]:
     blocks = re.findall(r"```(?:python)?\s*(.*?)```", text, flags=re.S)
     if blocks:
